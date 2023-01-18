@@ -85,7 +85,7 @@ public class InstructorDetail {
 >* CascadeType.ALL：包含以上所有級聯屬性
 >* CascadeType.PERSIST：級聯保存，當調用了Persist() 方法，會級聯保存相應的數據
 >
->@OneToOne 用來表示類似於Instructor與InstructorDetail之間的一對一的關係，在Instructor表中會有一個指向InstructorDetail表主鍵的字段instructor_detail_id，所以主控方（指能夠主動改變關聯關係的一方）一定是Instructor，因為，只要改變Instructor表的instructor_detail_id就改變了Instructor與InstructorDetail之間的關聯關係，所以@JoinColumn要寫在Instructor實體類Employee上，自然而然地，InstructorDetail就是被控方了
+>@OneToOne 用來表示類似於Instructor與InstructorDetail之間的一對一的關係，在Instructor表中會有一個指向InstructorDetail表主鍵的字段instructor_detail_id，所以主控方（指能夠主動改變關聯關係的一方）一定是Instructor，因為，只要改變Instructor表的instructor_detail_id就改變了Instructor與InstructorDetail之間的關聯關係，所以@JoinColumn要寫在Instructor實體類上，自然而然地，InstructorDetail就是被控方了
 ```
 @Entity
 @Table(name="instructor")
